@@ -2,7 +2,7 @@ const medida1 = document.getElementById("medida1")
 const medida2 = document.getElementById("medida2")
 const unidade1 = document.getElementById("unidade1")
 const unidade2 = document.getElementById("unidade2")
-
+console.log(medida1)
 
 function atualizar_valor(){
     x=null
