@@ -4,10 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>flappy_bird??</title>
-    
+    <style>
+        body{
+            overflow: hidden;
+            display: flex;
+            background-image: url("./Sprites/bg.png");
+        }
+    </style>
 </head>
 <body>
-    <img src="https://www.pngall.com/wp-content/uploads/15/Flappy-Bird-PNG-File.png" id = "passaro" style="top: 5px; position: absolute; height: 50px;">
+    <div name="parallax-bg">
+        <div>
+            <img src="./Sprites/nuvem.png" style="position: absolute; bottom: 0px; left: 0vw; width: 50vw;" id="nuvem1">
+            <img src="./Sprites/nuvem.png" style="position: absolute; bottom: 0px; left: 50vw; width: 50vw;" id="nuvem2">
+            <img src="./Sprites/nuvem.png" style="position: absolute; bottom: 0px; left: 100vw; width: 50vw;" id="nuvem3">
+        </div>
+        <div>
+            <img src="./Sprites/cidade.png" style="position: absolute; bottom: 0px; left: 0vw; width: 50vw;" id="cidade1">
+            <img src="./Sprites/cidade.png" style="position: absolute; bottom: 0px; left: 50vw; width: 50vw;" id="cidade2">
+            <img src="./Sprites/cidade.png" style="position: absolute; bottom: 0px; left: 100vw; width: 50vw;" id="cidade3">
+        </div>
+        <div>
+            <img src="./Sprites/arbusto.png" style="position: absolute; bottom: 0px; left: 0vw; width: 50vw;" id="arbusto1">
+            <img src="./Sprites/arbusto.png" style="position: absolute; bottom: 0px; left: 50vw; width: 50vw;" id="arbusto2">
+            <img src="./Sprites/arbusto.png" style="position: absolute; bottom: 0px; left: 100vw; width: 50vw;" id="arbusto3">
+        </div>
+    </div>
+    <div id="canos">
+        
+    </div>
+    <div name="chao">
+        <img src="./Sprites/chao.png" style="position: absolute; bottom: 0px; left: 0vw; width: 50vw;" id="chao1">
+        <img src="./Sprites/chao.png" style="position: absolute; bottom: 0px; left: 50vw; width: 50vw;" id="chao2">
+        <img src="./Sprites/chao.png" style="position: absolute; bottom: 0px; left: 100vw; width: 50vw;" id="chao3">
+    </div>
+    <img src="./Sprites/passaro.png" id = "passaro" style="top: 5px; left: 25vw; position: absolute;">
+
     <script src="script.js"></script>
 </body>
 </html>
