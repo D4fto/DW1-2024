@@ -158,6 +158,7 @@ setInterval(function(){
             }
             proporcao_fps=(fps/10).toFixed(4)
             velocidade *= proporcao_fps
+            console.log(proporcao_fps)
             console.log(fps)
             console.log(contador)
             console.log(media_fps)
