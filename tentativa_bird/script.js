@@ -5,13 +5,25 @@ altura_passaro = 0
 velocidade_pulo = 0
 pulo_ok = true
 rotation = 0
-velocidade = 1
+velocidade = 2
 pontos = 0
 cano_passado = null
 x=0
 contador = 0
+fps=0
+rodada_teste = true
+media_fps = null
+function reset(){
+    for(i=0;i<div_cano.querySelectorAll("img").length;i++){
+        div_cano.querySelectorAll("img")[i].parentElement.removeChild(div_cano.querySelectorAll("img")[i])
+        }
+    
+}
+
+
+
 function gravidade(){
-    altura_passaro += 0.5
+    altura_passaro += 1
 }
 document.querySelector("body").onkeydown = (event) => {
     if (pulo_ok & altura_passaro>0){
@@ -56,7 +68,7 @@ function parallax(speed,item){
 }
 
 function pulo(){
-    velocidade_pulo=1.2
+    velocidade_pulo=1.9
 }
 function mover_canos(){
     for(i=0;i<div_cano.querySelectorAll("img").length;i++){
@@ -99,7 +111,7 @@ function update() {
     }
     if (velocidade_pulo>0){
         velocidade_pulo-=0.03
-        rotation = velocidade_pulo*-1*75
+        rotation = velocidade_pulo*-1*25
         altura_passaro-=velocidade_pulo
     }
     else if(rotation<45 & altura_passaro/100*window.innerHeight<window.innerHeight-passaro.height-document.getElementById("chao1").height){
@@ -112,15 +124,41 @@ function update() {
         rotation -= 1
     }
     contador++
-    if (true) {
+    if (rodada_teste){ 
         requestAnimationFrame(update);
     }
+    
 }
 setInterval(function(){
-    console.log(contador)
+    
+    if (rodada_teste){
+        if (media_fps == null){
+            media_fps=contador
+        }
+        media_fps=(contador+media_fps)/2
+    }
+    
     contador=0
 }, 1000);
-setInterval(function(){
+
+    update()
+    setInterval(function(){
+        if(rodada_teste){
+            rodada_teste=false
+            fps = parseInt(1000/(parseInt(media_fps)-5))
+            console.log(fps)
+            console.log(contador)
+            console.log(media_fps)
+            setInterval(function(){
+                update()
+            }, fps);
+        }
+        
+    }, 10000);
+    
+    
+
+
+setInterval(function(){-
     gerar_canos()
-}, 1500);
-update()
+}, 1200);
