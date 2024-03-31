@@ -113,7 +113,7 @@ function update() {
     }
     if (velocidade_pulo>0){
         velocidade_pulo-=0.03*proporcao_fps
-        rotation = velocidade_pulo*-1*25
+        rotation = velocidade_pulo*-1*25*proporcao_fps
         altura_passaro-=velocidade_pulo
     }
     else if(rotation<45 & altura_passaro/100*window.innerHeight<window.innerHeight-passaro.height-document.getElementById("chao1").height){
