@@ -11,6 +11,7 @@ cano_passado = null
 x=0
 contador = 0
 fps=0
+min = 1000
 rodada_teste = true
 proporcao_fps=1
 media_fps = null
@@ -136,6 +137,9 @@ setInterval(function(){
         if (media_fps == null){
             media_fps=contador
         }
+        if(min>contador){
+            min=contador
+        }
         media_fps=(contador+media_fps)/2
     }
     
@@ -146,7 +150,12 @@ setInterval(function(){
     setInterval(function(){
         if(rodada_teste){
             rodada_teste=false
-            fps = parseInt(1000/parseInt(media_fps-10))
+            if(media_fps<40){
+                fps = parseInt(1000/parseInt(media_fps-10))
+            }
+            else{
+                fps = parseInt(1000/parseInt(min))
+            }
             proporcao_fps=(fps/10).toFixed(4)
             velocidade *= proporcao_fps
             console.log(fps)
