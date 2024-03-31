@@ -12,6 +12,7 @@ x=0
 contador = 0
 fps=0
 rodada_teste = true
+proporcao_fps=1
 media_fps = null
 function reset(){
     for(i=0;i<div_cano.querySelectorAll("img").length;i++){
@@ -23,7 +24,7 @@ function reset(){
 
 
 function gravidade(){
-    altura_passaro += 1
+    altura_passaro += 1*proporcao_fps
 }
 document.querySelector("body").onkeydown = (event) => {
     if (pulo_ok & altura_passaro>0){
@@ -68,7 +69,7 @@ function parallax(speed,item){
 }
 
 function pulo(){
-    velocidade_pulo=1.9
+    velocidade_pulo=1.9*proporcao_fps
 }
 function mover_canos(){
     for(i=0;i<div_cano.querySelectorAll("img").length;i++){
@@ -110,7 +111,7 @@ function update() {
             gravidade()
     }
     if (velocidade_pulo>0){
-        velocidade_pulo-=0.03
+        velocidade_pulo-=0.03*proporcao_fps
         rotation = velocidade_pulo*-1*25
         altura_passaro-=velocidade_pulo
     }
@@ -145,7 +146,9 @@ setInterval(function(){
     setInterval(function(){
         if(rodada_teste){
             rodada_teste=false
-            fps = parseInt(1000/(parseInt(media_fps)-5))
+            fps = parseInt(1000/parseInt(media_fps-10))
+            proporcao_fps=(fps/10).toFixed(4)
+            velocidade *= proporcao_fps
             console.log(fps)
             console.log(contador)
             console.log(media_fps)
