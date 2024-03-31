@@ -10,6 +10,17 @@
             display: flex;
             background-image: url("./Sprites/bg.png");
         }
+        @font-face {
+            font-family: fontepixel;
+            src: url(./fonts/FontePixel.TTF)
+        }
+        p{
+            font-family: "fontepixel"; 
+            color: white; 
+            -webkit-text-stroke-width: 0.1vh; 
+            -webkit-text-stroke-color: rgb(0, 0, 0);
+
+        }
     </style>
 </head>
 <body>
@@ -31,7 +42,7 @@
         </div>
     </div>
     <div id="canos">
-        
+
     </div>
     <div name="chao">
         <img src="./Sprites/chao.png" style="position: absolute; bottom: 0px; left: 0vw; width: 50vw;" id="chao1">
@@ -39,7 +50,7 @@
         <img src="./Sprites/chao.png" style="position: absolute; bottom: 0px; left: 100vw; width: 50vw;" id="chao3">
     </div>
     <img src="./Sprites/passaro.png" id = "passaro" style="top: 5px; left: 25vw; position: absolute;">
-
+    <p style="position: absolute;right: 1vh;top: -10vh; font-size: 10vh;" id="ponto">0</p>
     <script src="script.js"></script>
 </body>
 </html>

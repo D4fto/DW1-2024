@@ -1,10 +1,14 @@
 const passaro = document.getElementById("passaro")
 const div_cano = document.getElementById("canos")
+const contador_pontos = document.getElementById("ponto")
 altura_passaro = 0
 velocidade_pulo = 0
 pulo_ok = true
 rotation = 0
 velocidade = 1
+pontos = 0
+cano_passado = null
+x=0
 function gravidade(){
     altura_passaro += 0.5
 }
@@ -21,7 +25,7 @@ document.querySelector("body").onkeyup = (event) => {
 }
 
 function gerar_canos(){
-    console.log("gerando")
+    
     altura = Math.random() * (0.8 - 0.1) + 0.1
     for(var i = 1; i<=2;i++){
         cano = document.createElement("img");
@@ -36,7 +40,7 @@ function gerar_canos(){
             cano.style.top = String(altura*100+20)+"vh"
         }
         
-        div_cano.insertAdjacentElement("afterbegin", cano)
+        div_cano.insertAdjacentElement("beforeend", cano)
     }
     
 }
@@ -61,13 +65,25 @@ function mover_canos(){
             div_cano.querySelectorAll("img")[i].parentElement.removeChild(div_cano.querySelectorAll("img")[i])
         }
     }
-    console.log(div_cano.querySelectorAll("img"))
+    
 }
 
 
 
 function update() {
-    
+    if(div_cano.querySelectorAll("img")[0]!=null & div_cano.querySelectorAll("img")[0]!=cano_passado ){
+        if(parseInt(div_cano.querySelectorAll("img")[0].style.left)<parseInt(passaro.style.left)){
+            if (x == 10){
+                pontos+=1
+                cano_passado=div_cano.querySelectorAll("img")[0]
+                contador_pontos.innerText = pontos
+                x=0
+            }
+            else{
+                x++
+            }
+        }
+    }
     passaro.height = document.getElementById("chao1").height*0.75
     mover_canos()
     parallax(0.02*velocidade,"nuvem")
@@ -94,12 +110,12 @@ function update() {
     else if(rotation>0){
         rotation -= 1
     }
-
+    
     if (true) {
         requestAnimationFrame(update);
     }
 }
 setInterval(function(){
     gerar_canos()
-}, 2000);
-requestAnimationFrame(update);
+}, 1500);
+update()
