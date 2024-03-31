@@ -9,6 +9,7 @@ velocidade = 1
 pontos = 0
 cano_passado = null
 x=0
+contador = 0
 function gravidade(){
     altura_passaro += 0.5
 }
@@ -110,11 +111,15 @@ function update() {
     else if(rotation>0){
         rotation -= 1
     }
-    
+    contador++
     if (true) {
         requestAnimationFrame(update);
     }
 }
+setInterval(function(){
+    console.log(contador)
+    contador=0
+}, 1000);
 setInterval(function(){
     gerar_canos()
 }, 1500);
