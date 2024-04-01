@@ -17,6 +17,7 @@
         p{
             font-family: "fontepixel"; 
             color: white; 
+            padding: 0px;
             -webkit-text-stroke-width: 0.1vh; 
             -webkit-text-stroke-color: rgb(0, 0, 0);
 
@@ -42,15 +43,21 @@
         </div>
     </div>
     <div id="canos">
-
+        <img src="./Sprites/cano_1.png" style="height: 100vh; position: absolute; bottom: 80vh; left: 50vw;">
+        <img src="./Sprites/cano_2.png" style="height: 100vh; position: absolute; top: 40vh; left: 50vw;">
+        <img src="./Sprites/cano_1.png" style="height: 100vh; position: absolute; bottom: 40vh; left: 85vw;">
+        <img src="./Sprites/cano_2.png" style="height: 100vh; position: absolute; top: 80vh; left: 85vw;">
     </div>
     <div name="chao">
         <img src="./Sprites/chao.png" style="position: absolute; bottom: 0px; left: 0vw; width: 50vw;" id="chao1">
         <img src="./Sprites/chao.png" style="position: absolute; bottom: 0px; left: 50vw; width: 50vw;" id="chao2">
         <img src="./Sprites/chao.png" style="position: absolute; bottom: 0px; left: 100vw; width: 50vw;" id="chao3">
     </div>
-    <img src="./Sprites/passaro.png" id = "passaro" style="top: 5px; left: 25vw; position: absolute;">
-    <p style="position: absolute;right: 1vh;top: -10vh; font-size: 10vh;" id="ponto">0</p>
+    <img src="./Sprites/passaro.png" id = "passaro" style="top: 20vw; left: 25vw; position: absolute; height:6vh;">
+    <p style="position: absolute;right: 1vw;top: -15vh; font-size: 15vh;" id="maior_ponto">0</p>
+    <p style="position: absolute;left: 1vw;top: -15vh; font-size: 15vh;" id="ponto">0</p>
+    <img src="./Sprites/start.png" style="height: 10vh; position: absolute; top: 75vh;left: 10vw;cursor: pointer"id = "button_start">
+    <img src="./Sprites/score.png" style="height: 10vh; position: absolute; top: 75vh;left: 30vw;cursor: pointer"id = "button_score">
     <script src="script.js"></script>
 </body>
 </html>
