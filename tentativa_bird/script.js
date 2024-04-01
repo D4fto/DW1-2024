@@ -22,6 +22,8 @@ media_fps = null
 timer_cano = null
 timer_fps = null
 function iniate(){
+    pontos=0
+    contador_pontos.innerText = pontos
     button_start.style.visibility = "hidden"
     button_score.style.visibility = "hidden"
     for(var i=0;i<div_cano.querySelectorAll("img").length*4;i++){
@@ -39,6 +41,7 @@ function iniate(){
     }, 1200)*proporcao_fps;
 }
 function reset(){
+    
     button_start.style.visibility = "visible"
     button_score.style.visibility = "visible"
     clearInterval(timer_cano)
@@ -85,7 +88,7 @@ function gerar_canos(){
             cano.style.bottom = String(-1*altura*100+100)+"vh"
         }
         if (i == 2){
-            cano.style.top = String(altura*100+22)+"vh"
+            cano.style.top = String(altura*100+21)+"vh"
         }
         
         div_cano.insertAdjacentElement("beforeend", cano)
@@ -131,9 +134,6 @@ function update() {
             
 
             if (detectar_colisao([window.innerWidth*(parseFloat(passaro.style.left)/100),window.innerHeight*(parseFloat(passaro.style.top)/100)],[window.innerWidth*(parseFloat(div_cano.querySelectorAll("img")[i].style.left)/100),window.innerHeight*(parseFloat(div_cano.querySelectorAll("img")[i].style.top)/100)],[passaro.clientWidth,passaro.clientHeight],[div_cano.querySelectorAll("img")[i].clientWidth,div_cano.querySelectorAll("img")[i].clientHeight])){
-            
-                pontos=0
-                contador_pontos.innerText = pontos
                 reset()
                 break
             }
@@ -147,9 +147,6 @@ function update() {
             
             
             if (detectar_colisao([window.innerWidth*(parseFloat(passaro.style.left)/100),window.innerHeight*(parseFloat(passaro.style.top)/100)],[window.innerWidth*(parseFloat(div_cano.querySelectorAll("img")[i].style.left)/100),window.innerHeight*((100-parseFloat(div_cano.querySelectorAll("img")[i].style.bottom))/100)-div_cano.querySelectorAll("img")[i].clientHeight],[passaro.clientWidth,passaro.clientHeight],[div_cano.querySelectorAll("img")[i].clientWidth,div_cano.querySelectorAll("img")[i].clientHeight])){
-                
-                pontos=0
-                contador_pontos.innerText = pontos
                 reset()
                 break
             }
