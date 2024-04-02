@@ -26,7 +26,8 @@ function iniate(){
     contador_pontos.innerText = pontos
     button_start.style.visibility = "hidden"
     button_score.style.visibility = "hidden"
-    for(var i=0;i<div_cano.querySelectorAll("img").length*4;i++){
+    fazol=div_cano.querySelectorAll("img").length
+    for(var i=0;i<fazol;i++){
         
         div_cano.querySelectorAll("img")[0].parentElement.removeChild(div_cano.querySelectorAll("img")[0])
         
