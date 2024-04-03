@@ -21,6 +21,7 @@ velocidade = 2*proporcao_fps
 media_fps = null
 timer_cano = null
 timer_fps = null
+
 function iniate(){
     pontos=0
     contador_pontos.innerText = pontos
@@ -32,7 +33,7 @@ function iniate(){
         div_cano.querySelectorAll("img")[0].parentElement.removeChild(div_cano.querySelectorAll("img")[0])
         
         }
-    velocidade = 2*proporcao_fps
+    
     timer_fps = setInterval(function(){
         update()
     }, 10);
@@ -75,7 +76,6 @@ document.querySelector("body").onkeyup = (event) => {
     pulo_ok = true
     
 }
-
 function gerar_canos(){
     
     altura = Math.random() * (0.8 - 0.1) + 0.1
@@ -123,6 +123,7 @@ function mover_canos(){
 
 
 function update() {
+    velocidade = 2*proporcao_fps*((1879/1008)/(window.innerWidth/window.innerHeight))
     if (div_cano.querySelectorAll("img").length<4){
         canos = div_cano.querySelectorAll("img").length
     }
@@ -251,4 +252,6 @@ setInterval(function(){
 button_start.addEventListener("click",function(){
     iniate()
 })
-    
+button_score.addEventListener("click",function(){
+    window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank');
+})
