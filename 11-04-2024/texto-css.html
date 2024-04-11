@@ -4,8 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+
+        .tudo{
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100vw;
+            height: 100vh;
+            background-color: green;
+            animation: cores 10000ms infinite linear;
+            z-index: -1;
+        }
+        .sublinhado{
+            text-decoration: underline;
+        }
+        .sombra{
+            color: green;
+            text-shadow: 0px -5px 10px rgb(255, 0, 0),0px -5px 10px rgb(255, 0, 0),0px -5px 10px rgb(255, 0, 0),0px -5px 10px rgb(255, 0, 0),0px 5px 10px rgb(0, 17, 255),0px 5px 10px rgb(55, 0, 255),0px 5px 10px rgb(0, 38, 255),0px 5px 10px rgb(25, 0, 255);
+
+            animation: cores 2s infinite linear;
+        }
+        input[body]~.tudo{
+            translate: (10px);
+        }
+        @keyframes cores{
+            0%{
+                filter: hue-rotate(0deg);
+            }
+            100%{
+                filter: hue-rotate(360deg);
+            }
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="tudo"></div>
+    <p class="sublinhado">Texto sublinhado</p>
+    <p class="sombra">Texto sombreado</p>
 </body>
 </html>
