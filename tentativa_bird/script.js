@@ -21,7 +21,7 @@ velocidade = 2*proporcao_fps
 media_fps = null
 timer_cano = null
 timer_fps = null
-
+console.log(passaro.style.left)
 function iniate(){
     pontos=0
     contador_pontos.innerText = pontos
