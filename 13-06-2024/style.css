@@ -1,0 +1,105 @@
+:root{
+    --color1: #FFC000;
+    --color2: #CC9500;
+    --color3: #13E000;
+    --color4: #208b2f;
+    --color5: #204905;
+    --menu_h_height: 60px;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow: hidden;
+    background: #13E000;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu a{
+    text-decoration: none;
+    color: unset;
+}
+.menu li{
+    list-style: none;
+}
+.menu_h{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.25em;
+    color: var(--color5);
+    height: var(--menu_h_height);
+    background-color: var(--color1);
+}
+.menu_h li{
+    height: inherit;
+}
+.menu_h li>a{
+    padding: 30px;
+    height: inherit;
+    transition: .3s;
+}
+.menu_h li>a:hover{
+    background-color: var(--color2);
+}
+li.titulo{
+    font-size: 1.25em;
+    padding: 15px;
+    margin-right: auto;
+}
+nav.menu{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+}
+div.principal{
+    position: fixed;
+    overflow: auto;
+    height: calc(100vh - var(--menu_h_height));
+    width: 100%;
+    top: var(--menu_h_height);
+    scroll-behavior: smooth;
+}
+section.titulo{
+    background-image: url(./caju.jpg);
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+    padding: 50px;
+    flex-direction: column;
+    color: white;
+    box-shadow: 0 0 15px black;
+}
+footer{
+    background-color: var(--color1);
+}
+main section:not(.titulo){
+    padding: 50px;
+}
+main li{
+    list-style: none;
+}
+section h1{
+    text-align: center;
+    background-color: var(--color1);
+}
+section h1~p, section h1~ul, section h1{
+    border: 4px dashed var(--color1);
+}
+section h1~p, section h1~ul{
+    padding: 20px 40px;
+    font-size: 1.5em;
+    text-align: justify;
+    border-top: none;
+    background-color: #fff3d1;
+}
+section h1{
+    border-bottom: none;
+}
+main{
+    background-image: linear-gradient(#ffedd8, rgb(247, 220, 140));
+
+}
