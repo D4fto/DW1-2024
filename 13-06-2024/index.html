@@ -5,25 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gwendolyn:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@700&display=swap" rel="stylesheet">
 </head>
 <body class="dark">
     <nav class="menu">
         <ul class="menu_h container">
-            <li class="container titulo"><h1>Cajuína São Geraldo</h1></li>
+            <li class="container titulo lxgw-wenkai-tc-bold"><h1>Cajuína São Geraldo</h1></li>
+            <li><a href="#comprar" class="container">Comprar</a></li>
             <li><a href="#historia" class="container">História</a></li>
             <li><a href="#producao" class="container">Produção</a></li>
-            <li><a href="#comprar" class="container">Comprar</a></li>
+            <li><a href="#curiosidades" class="container">Curiosidades</a></li>
         </ul>
     </nav>
-    <div class="principal">
+    <div class="principal container">
         <main>
-            <section class="titulo container">
+            <section class="titulo container" id="inicio">
                 <img src="./logo.png" alt="">
-                <h2>A mais tradicional cajuína direto do pé!</h2>
+                <h2 class="gwendolyn-bold">A mais tradicional cajuína direto do pé!</h2>
             </section>
-            <section id="historia">
-                <h1>História</h1>
-                <p>Bebida derivada do caju, tem origem étnica que remonta a história indígena. Era costume desses grupos a cauinagem, sendo um dos mais importantes rituais dessas populações. O “acaiu” ou açaí-ou (nome tupi do que é conhecido como caju) era ainda componente importante em suas dietas e também no uso medicinal. Grupos indígenas foram os principais responsáveis pela difusão desse vegetal pelo nordeste ao mesmo tempo que impulsionou correntes migratórias desses grupos para esta região do país. Devido ao contato interétnico, supostamente conflituoso, costumes ligados ao modo de fazer da bebida indígena foram parcialmente assimilados por populações não indígenas e em especial por família abastadas, que tinham como praxe oferecer a visitantes, constituindo em um ato de reafirmação de laços familiares e de amizade. É nesse contexto que a bebida passa a ser denominada cajuína. Outras atualizações são de cunho mercadológico e tem alterado traços significativos do modo de fazer tradicional da cajuína.</p>
+            <section id="comprar">
+                <h1>Comprar</h1>
+                <div class="container">
+                    <div class="banner">
+                        <img src="./cajuina_1litro.png" alt="">
+                        <h3>REFRIGERANTE CAJUÍNA MELHOR NORDESTE SÃO GERALDO CAJU 1L</h3>
+                        <p class="preco_atual">R$ 15,11</p>
+                        <a href="https://www.mercadolivre.com.br/refrigerante-cajuina-melhor-nordeste-so-geraldo-caju-1l/p/MLB19638826?matt_tool=18956390&utm_source=google_shopping&utm_medium=organic&item_id=MLB3862888088&from=gshop" target="_blank" rel="noopener noreferrer">Compre agora!</a>
+                    </div>
+                    <div class="banner">
+                        <img src="./cajuina_250ml.png" alt="">
+                        <h3>REFRIGERANTE SÃO GERALDO CAJUÍNA 250ML</h3>
+                        <p class="preco_antigo">R$ 8,99</p>
+                        <p class="preco_atual">R$ 2,29</p>
+                        <a href="https://mercadoholandajl.com.br/p/Refrigerante-Cajuina-250Ml" target="_blank" rel="noopener noreferrer">Compre agora!</a>
+                    </div>
+                    <div class="banner">
+                        <img src="./cajuina_lata.png" alt="">
+                        <h3>REFRIGERANTE DE CAJU SÃO GERALDO 350ML</h3>
+                        <p class="preco_atual">R$ 3,50</p>
+                        <a href="https://www.aurestore.com.br/mercado/bebidas/refrigerante-de-caju-sao-geraldo-350ml-lata?srsltid=AfmBOopy8snQDemBtarI6cMV6XINQzm30huVEnBM5yVfJEi5XduBn1nWKa8" target="_blank" rel="noopener noreferrer">Compre agora!</a>
+                    </div>
+                </div>
+            </section>
+            <section id="historia" class="container">
+                <div>
+                    <h1>História</h1>
+                    <p class="container"><img src="./cajuina_history.png" alt=""><span>Bebida derivada do caju, tem origem étnica que remonta a história indígena. Era costume desses grupos a cauinagem, sendo um dos mais importantes rituais dessas populações. O “acaiu” ou açaí-ou (nome tupi do que é conhecido como caju) era ainda componente importante em suas dietas e também no uso medicinal. Grupos indígenas foram os principais responsáveis pela difusão desse vegetal pelo nordeste ao mesmo tempo que impulsionou correntes migratórias desses grupos para esta região do país. Devido ao contato interétnico, supostamente conflituoso, costumes ligados ao modo de fazer da bebida indígena foram parcialmente assimilados por populações não indígenas e em especial por família abastadas, que tinham como praxe oferecer a visitantes, constituindo em um ato de reafirmação de laços familiares e de amizade. É nesse contexto que a bebida passa a ser denominada cajuína. Outras atualizações são de cunho mercadológico e tem alterado traços significativos do modo de fazer tradicional da cajuína.</span></p>
+                </div>
             </section>
             <section id="producao">
                 <h1>Produção</h1>
@@ -34,23 +68,30 @@
                     <li><h3>Tratamento térmico</h3><p>As garrafas devidamente cheias e fechadas são submetidas a um banho-maria, para promover a esterilização comercial do produto, aumentando sua durabilidade, e a caramelização dos açúcares, que faz com que o produto atinja a a coloração amarelo-âmbar, característica da cajuína.</p></li>
                 </ul>
             </section>
-            <section id="comprar">
-                <h1>Comprar</h1>
-                <p>Bebida derivada do caju, tem origem étnica que remonta a história indígena. Era costume desses grupos a cauinagem, sendo um dos mais importantes rituais dessas populações. O “acaiu” ou açaí-ou (nome tupi do que é conhecido como caju) era ainda componente importante em suas dietas e também no uso medicinal. Grupos indígenas foram os principais responsáveis pela difusão desse vegetal pelo nordeste ao mesmo tempo que impulsionou correntes migratórias desses grupos para esta região do país. Devido ao contato interétnico, supostamente conflituoso, costumes ligados ao modo de fazer da bebida indígena foram parcialmente assimilados por populações não indígenas e em especial por família abastadas, que tinham como praxe oferecer a visitantes, constituindo em um ato de reafirmação de laços familiares e de amizade. É nesse contexto que a bebida passa a ser denominada cajuína. Outras atualizações são de cunho mercadológico e tem alterado traços significativos do modo de fazer tradicional da cajuína.</p>
+            <section id="curiosidades">
+                <h1>7 Curiosidades sobre a cajuína</h1>
+                <ol>
+                    <li><span>Existem relatos sobre o que poderia ser a primeira experiência da Cajuína feita por indígenas que produziam o mocororó, que é a água de caju fermentada, ainda no período Colonial. <br>Contudo, a versão oficial, e na forma que conhecemos a cajuína hoje, só foi criada no ano de 1900, pelo farmacêutico baiano Rodolfo Teófilo.</span></li>
+                    <li><span>Rodolfo Teófilo inventou a Cajuína para combater o alcoolismo, visto que a bebida poderia substituir a cachaça em encontros sociais e poderia ser desfrutada em momentos de solidão.</span></li>
+                    <li><span>Apesar de não conter álcool, a Cajuína é consumida com várias bebidas alcóolicas.</span></li>
+                    <li><span>De tão famosa, a bebida virou tema da canção “Cajuína”, de Caetano Veloso, que faz uma homenagem à receita típica e à capital do Piauí, Teresina</span></li>
+                    <li><span>Cajuína é rica em Vitamina C e A que trazem benefícios para o sistema imunológico. Assim, a bebida é capaz de auxiliar na prevenção a gripes e resfriados.</span></li>
+                    <li><span>O Piauí é o estado brasileiro que mais produz cajuína. No ano de 2018, por exemplo, mais de 10 milhões de litros foram produzidos. A cidade de Santo Antônio de Lisboa, é conhecida como a capital do caju e da cajuína.</span></li>
+                    <li><span>Se lhe oferecerem cajuína, pode ter certeza que gostam muito de você e sentem prazer em lhe receber.</span></li>
+                </ol>
             </section>
+            <a href="#inicio" id="voltar"><i class="bi bi-arrow-up-short"></i></a>
         </main>
         <footer>
-            <p>fsjgfjdgfd</p>
-            <p>fsjgfjdgfd</p>
-            <p>fsjgfjdgfd</p>
-            <p>fsjgfjdgfd</p>
-            <p>fsjgfjdgfd</p>
-            <p>fsjgfjdgfd</p>
-            <p>fsjgfjdgfd</p>
-            <p>fsjgfjdgfd</p>
-            <p>fsjgfjdgfd</p>
-            <p>fsjgfjdgfd</p>
-            <p>fsjgfjdgfd</p>
+            <div>
+                <p><a href="https://www.facebook.com/cajuinasaogeraldo/?locale=pt_BR" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook"></i> facebook</a></p>
+                <p><a href="https://www.youtube.com/channel/UC8VFxGIaY-FOVB3nyOtomuw" target="_blank" rel="noopener noreferrer"><i class="bi bi-youtube"></i> youtube</a></p>
+                <p><a href="https://www.instagram.com/cajuinasaogeraldo/?hl=pt" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i> instagram</a></p>
+                <p><i class="bi bi-telephone-fill"></i> 4003-6125</p>
+                <p><i class="bi bi-envelope-fill"></i>contato@cajuinasaogeraldo.com.br</p>
+                <p><i class="bi bi-sign-turn-right-fill"></i> Av. Pe. Cícero - km 02 - Triângulo, Juazeiro do Norte, CE, Brazil</p>
+            </div>
+            <p>Todos os direitos reservados © 2023</p>
         </footer>
     </div>
 </body>
