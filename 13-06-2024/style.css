@@ -4,7 +4,7 @@
     --color3: #13E000;
     --color4: #208b2f;
     --color5: #204905;
-    --menu_h_height: 60px;
+    --menu_h_height: 3.75rem;
 }
 
 .gwendolyn-bold {
@@ -55,7 +55,7 @@ body{
     height: inherit;
 }
 .menu_h li>a{
-    padding: 30px;
+    padding: 1.875rem;
     height: inherit;
     transition: .3s;
 }
@@ -65,7 +65,7 @@ body{
 }
 li.titulo{
     font-size: 1.25em;
-    padding: 15px;
+    padding: .9375rem;
     margin-right: auto;
 }
 nav.menu{
@@ -91,21 +91,21 @@ section.titulo{
     background-size: cover;
     background-position: top;
     background-attachment: fixed;
-    padding: 150px 0;
+    padding: 9.375rem 0;
     flex-direction: column;
     color: white;
-    box-shadow: 0 0 15px black;
+    box-shadow: 0 0 .9375rem black;
     *{
         max-width: 90%;
     }
     img{
-        width: 600px;
+        width: 37.5rem;
         max-width: 90%;
     }
 }
 
 main section:not(.titulo){
-    padding: 50px;
+    padding: 3.125rem;
 }
 main li{
     list-style: none;
@@ -113,14 +113,14 @@ main li{
 section h1{
     text-align: center;
     font-size: 2.5em;
-    padding: 10px;
+    padding: .625rem;
     background-color: var(--color1);
 }
 section h1~*, section h1{
-    border: 4px dashed var(--color1);
+    border: .25rem dashed var(--color1);
 }
 section h1~*{
-    padding: 20px 40px;
+    padding: 1.25rem 2.5rem;
     font-size: 1.5em;
     text-align: justify;
     border-top: none;
@@ -136,13 +136,13 @@ main{
     background-image: url(./caju_bg.png);
 }
 #historia p{    
-    gap: 50px;
+    gap: 3.125rem;
     img{
         max-width: 90%;
         flex-grow: 0.25;
-        border-radius: 15px;
-        box-shadow: 0 0 15px;
-        width: 500px;
+        border-radius: .9375rem;
+        box-shadow: 0 0 .9375rem;
+        width: 31.25rem;
         aspect-ratio: 16/11;
         object-fit: cover;
         object-position: top;
@@ -152,28 +152,28 @@ main{
 #comprar > div{ 
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 30px 15px;
+    gap: 1.875rem .9375rem;
 }
 .banner{
     align-items: center;
     display: flex;
     flex-direction: column;
     position: relative;
-    border-radius: 10px;
+    border-radius: .625rem;
     max-width: 95%;
     overflow-wrap: break-word;
-    width: 300px;
-    height: 600px;
-    padding: 15px;
+    width: 18.75rem;
+    height: 37.5rem;
+    padding: .9375rem;
     background-image: linear-gradient(color-mix(in srgb, var(--color1) 50%, rgb(255, 230, 149) 10%) 50%,color-mix(in srgb, var(--color2) 100%, white 30%));
-    box-shadow: 0 0 15px;
+    box-shadow: 0 0 .9375rem;
     img{
         aspect-ratio: 1/1;
         object-fit: contain;
         width: 100%;
         background-color: color-mix(in srgb, var(--color1) 50%, white 50%);
-        border-radius: 5px;
-        margin-bottom: 10px;
+        border-radius: .3125rem;
+        margin-bottom: .625rem;
     }
     a{
         position: absolute;
@@ -183,11 +183,11 @@ main{
         text-align: center;
         display: flex;
         justify-content: center;
-        border-radius: 10px;
-        padding: 10px;
+        border-radius: .625rem;
+        padding: .625rem;
         background-color: var(--color3);
         transition: .5s;
-        bottom: 10px;
+        bottom: .625rem;
     }
     a:hover{
         filter: brightness(1.2);
@@ -198,11 +198,11 @@ main{
     }
 }
 .preco_atual{
-    bottom: 60px;
+    bottom: 3.75rem;
     font-size: 1.2em;
 }
 .preco_antigo{
-    bottom: calc(66px + 1.2em);
+    bottom: calc(4.125rem + 1.2em);
     font-size: 0.9em;
     text-decoration: line-through;
     color: var(--color2);
@@ -210,11 +210,11 @@ main{
 }
 .preco_antigo+.preco_atual{
     background-color: var(--color4);
-    border-radius: 3px;
-    padding: 1px 5px;
+    border-radius: .1875rem;
+    padding: .0625rem .3125rem;
     color: white;
 }
-@media (max-width: 1250px) {
+@media (max-width: 78.125rem) {
     #historia p {
         flex-wrap: wrap;
     }
@@ -224,14 +224,14 @@ main{
 }
 ::-webkit-scrollbar-thumb{
     background: var(--color2);
-    border: 3px solid var(--color1);
-    border-radius: 10px;
+    border: .1875rem solid var(--color1);
+    border-radius: .625rem;
 }
 ::-webkit-scrollbar-track{
     background-color: var(--color1);
 }
 #producao li:not(:last-child){
-    margin-bottom: 50px;
+    margin-bottom: 3.125rem;
 }
 #curiosidades li{
     list-style: unset;
@@ -242,7 +242,7 @@ main{
     }
 }
 #curiosidades li:not(:last-child){
-    margin-bottom: 15px;
+    margin-bottom: .9375rem;
 }
 #voltar{
     position: fixed;
@@ -251,10 +251,10 @@ main{
     align-items: center;
     font-size: 3rem;
     border-radius: 100%;
-    height: 50px;
-    width: 50px;
-    bottom: 10px;
-    right: 20px;
+    height: 3.125rem;
+    width: 3.125rem;
+    bottom: .625rem;
+    right: 1.25rem;
     background-color: var(--color4);
     transition: .3s;
     color: white;
@@ -263,32 +263,35 @@ main{
     filter: brightness(1.2);
 }
 footer{
-    box-shadow: 0 15px 15px 15px;
+    box-shadow: 0 .9375rem .9375rem .9375rem;
     background-color: var(--color1);
     color: rgb(24, 48, 14);
-    padding: 15px;
+    padding: .9375rem;
     width: 100%;
     text-align: center;
     div>*{
-        margin-bottom: 10px;
+        margin-bottom: .625rem;
     }
     a{
         color: unset;
         text-decoration: none;
     }
+    a:hover{
+        text-decoration: underline;
+    }
     div{
         font-size: 1.25em;
     }
 }
-@media (max-width: 700px) {
+@media (max-width: 43.75rem) {
     body{
-        font-size: 0.75rem;
+        font-size: .75rem;
     }
     section h1{
         font-size: 3em;
     }
     .banner{
         font-size: 0.95em;
-        height: 450px;
+        height: 28.125rem;
     }
 }
