@@ -7,6 +7,8 @@
     <link rel="shortcut icon" type="image/ico" href="./favicon.ico"/>
     <style>
         body{
+            width: 100vw;
+            height: 100vh;
             overflow: hidden;
             display: flex;
             background-image: url("./Sprites/bg.png");
@@ -22,10 +24,18 @@
             -webkit-text-stroke-width: 0.2vh; 
             -webkit-text-stroke-color: rgb(0, 0, 0);
 
+        } 
+        .naoselecionavel{
+        -webkit-touch-callout: none;  
+        -webkit-user-select: none;    
+        -khtml-user-select: none;     
+        -moz-user-select: none;       
+        -ms-user-select: none;        
+        user-select: none;  
         }
     </style>
 </head>
-<body>
+<body class="naoselecionavel">
     <div name="parallax-bg">
         <div>
             <h1 style="color: #dc143c;"></h1>

@@ -65,14 +65,25 @@ function detectar_colisao(pos1,pos2,tam1,tam2){
 function gravidade(){
     altura_passaro += 1*proporcao_fps
 }
-document.querySelector("body").onkeydown = (event) => {
+document.querySelector("html").onkeydown = (event) => {
     if (pulo_ok & altura_passaro>0){
         pulo()
         pulo_ok = false
     }
     
 }
-document.querySelector("body").onkeyup = (event) => {
+document.querySelector("html").onmousedown = (event) => {
+    if (pulo_ok & altura_passaro>0){
+        pulo()
+        pulo_ok = false
+    }
+    
+}
+document.querySelector("html").onkeyup = (event) => {
+    pulo_ok = true
+    
+}
+document.querySelector("html").onmouseup = (event) => {
     pulo_ok = true
     
 }
