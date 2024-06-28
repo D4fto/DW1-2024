@@ -1,9 +1,12 @@
 import pyautogui
-for _ in range(200):
-    pyautogui.PAUSE = 0.5
-    pyautogui.moveTo(712,445)
-    pyautogui.click()
-    pyautogui.PAUSE = 3.5
-    pyautogui.moveTo(941,870)
-    pyautogui.PAUSE = 0.5
-    pyautogui.click()
+import time
+x=0
+while True:
+    print(pyautogui.screenshot().getpixel((200, 200)))
+
+    if pyautogui.screenshot().getpixel((200, 200)) == (75, 219, 106) or pyautogui.screenshot().getpixel((200, 200)) != (206, 38, 54):
+        if x<5:
+            pyautogui.click(200,200)
+            x+=1
+    else:
+        x=0

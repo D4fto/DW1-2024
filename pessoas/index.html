@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="./script.js"></script>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            /* background-color: blue; */
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100vw;
+            /* animation: gira2 10ms infinite reverse linear, gira3 10000ms infinite linear; */
+        }
+        @keyframes gira2 {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg)
+            }
+        }
+        @keyframes gira3 {
+            0%{
+                background-color: red;
+            }
+            50%{
+                
+                background-color: rgb(94, 255, 0);
+            }
+            100%{
+                
+                background-color: red;
+            }
+        }
+        @keyframes gira{
+            0%{
+                transform: rotate(0deg);
+                filter: hue-rotate(0deg) blur(0px) saturate(0) sepia(0) ;
+            }
+            50%{
+                transform: rotate(180deg);
+                filter: hue-rotate(180deg) blur(15px) saturate(100) sepia(100);
+
+            }
+            100%{
+                transform: rotate(360deg);
+                filter: hue-rotate(360deg) blur(0px) saturate(0) sepia(0);
+            }
+        }
+        .list{
+            margin: 0 50px;
+            flex-shrink: 2;
+            border-radius: 5px;
+            border: 15px solid #5B9EED;
+            width: 700px;
+            height: fit-content;
+            max-height: 700px;
+            overflow: scroll;
+            overflow-x: hidden;
+            /* animation: gira 101ms infinite linear; */
+        }
+        .list-item:not(:last-child){
+            border-bottom: 3px dashed rgb(190, 190, 190);
+        }
+        .list-item{
+            list-style: none;
+            display: flex;
+            background-color: rgb(252, 243, 243);
+            
+            padding: 15px;
+            gap: 15px;
+            img{
+                flex-shrink: 0;
+                border-radius: 50%;
+            }
+            div{
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                p{
+                    color: gray;
+                }
+                h1{
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    text-transform: capitalize;
+                }
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <ul class="list">
+    </ul>
+</body>
+</html>
