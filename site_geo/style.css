@@ -91,6 +91,10 @@ nav ul a:hover{
     filter: brightness(1.2);
     font-size: 2em;
 }
+a.active{
+    text-decoration: underline !important;
+    
+}
 tbody tr:nth-child(even){
     filter: brightness(0.9);
     background-color: #ceffd1; 
