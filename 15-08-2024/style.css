@@ -1,3 +1,15 @@
+
+.grey-qo-regular {
+    font-family: "Grey Qo", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+.lxgw-wenkai-tc-bold {
+    font-family: "LXGW WenKai TC", system-ui;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
 *{
     margin: 0;
     padding: 0;
@@ -10,17 +22,24 @@ body{
     align-items: center;
     flex-wrap: wrap;
     height: 100vh;
-    padding: 0px 5px;
+    padding: 0px 15px;
     background-color: #002e3d;
 
 }
-.imagem{
-    background-image: url(./imagem.png);
+#imagem{
     background-size: cover;
+    background-position: center;
     min-width: 200px;
-    flex-grow: 5;
-    height: 99%;
+    max-width: 65%;
+    flex-grow: 1;
+    height: 97%;
     border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: white;
+    padding: 50px;
+    transition: background-image .5s;
 }
 .forms{
     display: flex;
@@ -85,10 +104,15 @@ body{
         border: 1px solid #7b98be;
         padding: 5px;
 
+        transition: backdrop-filter 0.5s;
+        
     }
     a{
         color: black;
         text-decoration: none;
+    }
+    div:hover{
+        backdrop-filter: brightness(0.5);
     }
 }
 .forms form+div+div+div{
@@ -113,4 +137,53 @@ body{
 input[type='submit']{
     background-color: black;
     color: white;
+    transition: all 0.5s;
+}
+input[type='submit']:hover{
+    background-color: #00bfff;
+    color: black;
+}
+#imagem h1{
+    margin-bottom: 50px;
+    max-width: 75%;
+    font-size: 3em;
+    text-indent: 5em;
+    text-align: justify;
+}
+#imagem p{
+    font-size: 1.75em;
+}
+#imagem>div{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    span{
+        margin-left: 15px;
+        font-size: 3em;
+        font-weight: 900;
+        cursor: pointer;
+        transition: all .5s;
+    }
+    span:hover{
+        font-size: 3.5em;
+    }
+}
+@media (max-width:1320px){
+    #imagem{
+        max-width: 100%;
+
+    }
+}
+@media (max-width:600px){
+    #imagem{
+        font-size: 0.75em;
+    }
+    
+}
+@media (max-width:400px){
+    #imagem{
+        font-size: 0.5em;
+    }
+    
 }
