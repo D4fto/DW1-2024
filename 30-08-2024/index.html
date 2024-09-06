@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+        }
+    </style>
+</head>
+<body style="filter: hue-rotate(200deg);" id="body">
+    <div style="height: 100vh; width: 100vw; background-color: rgb(255, 0, 0);" id="div"></div>
+    <script>
+        var hue = 0
+        var r = 255
+        
+        var podendo=true
+        function mudar(){
+            let cor = `hue-rotate(${hue}deg)`
+                if(hue>358){
+                    hue=0
+                    if(podendo){
+                        r-=64
+                        document.getElementById('div').style.backgroundColor=`rgb(${r>-1?r:0}, 0, 0)`
+                        if(r==-1){
+                            podendo=false
+                        }
+                    }
+                    else{
+                        r+=64
+                        document.getElementById('div').style.backgroundColor=`rgb(${r}, 0, 0)`
+                        if(r==255){
+                            podendo=true
+                        }
+                    }
+                }
+                hue++
+
+ 
+            console.log(hue)
+            body.style.filter=cor
+        }
+        var intervalo = setInterval(mudar, 1)
+    </script>
+</body>
+</html>

@@ -1,6 +1,3 @@
-let condicao1 = false
-let condicao2 = false
-let condicao3 = false
 
 console.log(1)
 console.log(2)

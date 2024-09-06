@@ -7,6 +7,7 @@
 .lxgw-wenkai-tc-bold {
     font-family: "LXGW WenKai TC", system-ui;
     font-weight: 900;
+    filter: hue-rotate();
     font-style: normal;
   }
   
