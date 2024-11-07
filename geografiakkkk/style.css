@@ -21,14 +21,11 @@ body>div{
 .frase{
     width: 100%;
     position: relative;
-    
-
-
     background-image: url('./faculdade.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
-    height: 700px;
+    height: 100vh;
     font-size: 2.5rem;
     padding: 50px;
     display: flex;
@@ -247,7 +244,7 @@ a{
             background-color: #fff;
             box-shadow: 0 0 20px 0 #6968004d;
         }
-        .item:first-child, .item:first-child{
+        .item:first-child{
             background-color: #ff910028;
             border-color: #c78015;
             h1{
@@ -325,9 +322,54 @@ a{
     }
 }
 .legais{
+    a:not(:last-child) .item{
+        background-color: #f59f2f21;
+            border-color: #f5b62f;
+            h1{
+                color: #000000;
+            }
+            p{
+                background-color: #f5b02f;
+                border-radius: 20px;
+                padding: 25px;
+            }
+        
+    }
     .item{
         p{
             overflow-y: scroll;
+            height: 100%;
         }
     }
+    a:last-child .item{
+        background-color: #ff910028;
+        border-color: #c78015;
+        h1{
+            color: #000000;
+        }
+        p{
+            background-color: #f5882f;
+            border-radius: 20px;
+            padding: 25px;
+        }
+    }
+    a:first-child .item{
+        background-color: #f5e12f21;
+        border-color: #f5e12f;
+        h1{
+            color: #000000;
+        }
+        p{
+            background-color: #f5e12f;
+            border-radius: 20px;
+            padding: 25px;
+        }
+    }
+    a{
+        transition: transform .1s;
+    }
+    a:hover{
+        transform: scale(1.2);
+    }
+    
 }

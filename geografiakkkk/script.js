@@ -29,6 +29,9 @@ for (const item of itens) {
         }
         event.currentTarget.classList.add('grande')
     })
+    item.addEventListener('mouseout',(event)=>{
+        event.currentTarget.classList.remove('grande')
+    })
 }
 window.addEventListener('load', ()=>{
     window.scrollTo(window.scrollX, 0);
