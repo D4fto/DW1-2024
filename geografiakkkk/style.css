@@ -4,8 +4,10 @@
     padding: 0;
 }
 body{
-    width: 100vw;
+    width: 100vw ;
     height: 100vh;
+    max-width: 100vw;
+    min-width: 100vw;
     background-color: #fffdeb;
     overflow-x: hidden;
 }
@@ -92,6 +94,9 @@ body>div{
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;   
+    overflow-y: visible;
+    overflow-x: visible;
     justify-content: center;
     >h1{
         padding-top: 25px;
@@ -104,7 +109,7 @@ body>div{
     >div{
         width: 90%;
         display: flex;
-      
+        
         .linha{
             padding: 25px 0                     ;
             position: relative   ;
@@ -147,12 +152,22 @@ body>div{
                 }
                 .item:hover{
                     transform: scale(1.1);
+                    z-index: 4;
                 }
+                .item.grande{
+                    transform: scale(2.5);
+                }
+            }
+            .grupo:hover{
+                z-index: 4;
             }
             .grupo:last-child{
                 animation-delay: 20s;
                 transform: translateX(+100%);
             }
+        }
+        .linha:hover{
+            z-index: 4;
         }
         .linha:first-child{
             transform: translateY(-575px);

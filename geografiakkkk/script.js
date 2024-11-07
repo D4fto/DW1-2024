@@ -14,6 +14,22 @@ for (const item of linhas) {
         }
     })
 }
+const itens = document.querySelectorAll('.item')
+for (const item of itens) {
+    item.addEventListener('click',(event)=>{
+        for (const item of itens) {
+            if(event.currentTarget===item){
+                continue
+            }
+            item.classList.remove('grande')
+        }
+        if(event.currentTarget.classList.contains('grande')){
+            event.currentTarget.classList.remove('grande')
+            return
+        }
+        event.currentTarget.classList.add('grande')
+    })
+}
 window.addEventListener('load', ()=>{
     const frase = 'Ainda é importante realizar uma graduação?'
     const titulo1 = document.getElementById('inicio').querySelector('h1')
