@@ -213,4 +213,10 @@ body>div{
     #depoimentos{
         font-size: 1rem;
     }
+    .item.grande{
+        transform: scale(1.1) !important;
+    }
+    #depoimentos{
+        overflow: hidden;
+    }
 }
