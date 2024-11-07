@@ -6,7 +6,8 @@
 body{
     width: 100vw;
     height: 100vh;
-    background-color: #dbf7f0;
+    background-color: #fffdeb;
+    overflow-x: hidden;
 }
 ::-webkit-scrollbar{
     width: 0;
@@ -62,7 +63,6 @@ body>div{
     transition: background-attachment 1s;
 }
 #inicio{
-    
     background-color: #ffd900;
     text-align: center;
     height: 100vh;
@@ -83,5 +83,102 @@ body>div{
     }
     h1{
         font-size: 2.2em;
+    }
+}
+#depoimentos{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    >h1{
+        padding-top: 25px;
+        font-size: 2.5em;
+        max-width: 90%;
+    }
+    .apoio{
+        height: 575px;
+    }
+    >div{
+        width: 90%;
+        display: flex;
+      
+        .linha{
+            padding: 25px 0                     ;
+            position: relative   ;
+            .grupo{
+                display: flex;
+                gap: 50px;
+                padding: 25px 25px;
+                animation: toLeft 40s infinite linear;
+                position: absolute;
+                .item{
+                    display: flex;
+                    border-radius: 15px;
+                    flex-direction: column;
+                    height: 250px;
+                    width: 500px;
+                    min-width: 500px;
+                    background-color: #f8f8ee;
+                    box-shadow: 0px 0px 20px 0px #00000027;
+                    .text{
+                        height: 80%;
+                        overflow: scroll;
+                        padding: 0 25px;
+                        font-size: 1.3em;
+                        padding-top: 15px;
+                    }
+                    .autor{
+                        border-top-left-radius: 15px;
+                        border-top-right-radius: 15px;
+                        background-color: #ffd900;
+                        display: flex;
+                        align-items: center;
+                        padding: 0 25px;
+                        font-size: 1.5em;
+                        border-bottom: 2px dashed #000;
+                        font-weight: 900;
+                        flex-grow: 1;
+                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif                      ;
+                    }
+                }
+                .item:hover{
+                    transform: scale(1.1);
+                }
+            }
+            .grupo:last-child{
+                animation-delay: 20s;
+                transform: translateX(+100%);
+            }
+        }
+        .linha:first-child{
+            transform: translateY(-575px);
+        }
+        .linha:last-child{
+            transform: translateY(-275px);
+            .grupo{
+                animation: toRight 40s infinite linear;
+            }
+            .grupo:last-child{
+                animation-delay: 20s;
+                transform: translateX(+100%);
+            }
+        }
+    }
+}
+@keyframes toLeft{
+    0%{
+        transform: translateX(+55%);
+    }
+    100%{
+        transform: translateX(-145%);
+    }
+}
+@keyframes toRight{
+    0%{
+        transform: translateX(-110%);
+    }
+    100%{
+        transform: translateX(+90%);
     }
 }
