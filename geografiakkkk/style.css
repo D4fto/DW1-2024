@@ -60,7 +60,6 @@ body>div{
         z-index: 1;
         backdrop-filter: blur(20px);
     }
-    transition: background-attachment 1s;
 }
 #inicio{
     background-color: #ffd900;
@@ -84,6 +83,9 @@ body>div{
     h1{
         font-size: 2.2em;
     }
+}
+.paused {
+    animation-play-state: paused !important;
 }
 #depoimentos{
     width: 100vw;
@@ -121,6 +123,7 @@ body>div{
                     min-width: 500px;
                     background-color: #f8f8ee;
                     box-shadow: 0px 0px 20px 0px #00000027;
+                    transition: transform .1s;
                     .text{
                         height: 80%;
                         overflow: scroll;
@@ -180,5 +183,19 @@ body>div{
     }
     100%{
         transform: translateX(+90%);
+    }
+}
+@media (max-width:768px){
+    body{
+        font-size: 1.5rem;
+    }
+    #inicio{
+        font-size: 1.5rem;
+    }
+    .frase{
+        font-size: 1rem;
+    }
+    #depoimentos{
+        font-size: 1rem;
     }
 }
