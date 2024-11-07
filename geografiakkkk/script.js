@@ -32,7 +32,7 @@ for (const item of itens) {
 }
 window.addEventListener('load', ()=>{
     window.scrollTo(window.scrollX, 0);
-    const frase = 'é importante realizar uma graduação?'
+    const frase = 'Ainda é importante realizar uma graduação?'
     const titulo1 = document.getElementById('inicio').querySelector('h1')
     const titulo2 = document.getElementById('inicio').querySelector('h2')
     let x = 0
